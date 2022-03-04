@@ -67,9 +67,18 @@ int main()
 {
 
     int arr[7] = {0, 1, 3, 3, 3, 3, 4};
+    cout << endl;
     cout << "First occurence of 3 is at index: " << firstOcc(arr, 7, 3)
          << endl;
+
     cout << "Last occurence of 3 is at index: " << lastOcc(arr, 7, 3)
+         << endl;
+
+    // if u want to find how many times the given number
+    // came in the array the CODE is
+    cout << "The number occured in the array: "
+         << (lastOcc(arr, 7, 3) - firstOcc(arr, 7, 3)+1) << " times"
+         << endl
          << endl;
 
     return 0;
