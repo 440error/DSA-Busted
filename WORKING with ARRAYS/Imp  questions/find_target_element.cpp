@@ -54,10 +54,10 @@ int binarySearch(int arr[], int s, int e, int key)
     return -1;
 }
 
-int findPosition(int array, int n, int k)
+int findPosition(int arr, int n, int k)
 {
-    int pivot = findPivot(array, n);
-    if (k > array[pivot])
+    int pivot = findPivot(arr, n);
+    if (k > arr[pivot])
     {
     }
 }
