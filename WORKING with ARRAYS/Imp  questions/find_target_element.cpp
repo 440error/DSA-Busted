@@ -38,11 +38,12 @@ int binarySearch(int arr[], int s, int e, int key)
             return mid;
         }
 
-        // go to right wala part
+        // go to right part
         if (key > arr[mid])
         {
             start = mid + 1;
         }
+
         else
         { // key < arr[mid]
             end = mid - 1;
@@ -54,17 +55,39 @@ int binarySearch(int arr[], int s, int e, int key)
     return -1;
 }
 
-int findPosition(int arr, int n, int k)
-{
-    int pivot = findPivot(arr, n);
-    if (k > arr[pivot])
-    {
-    }
-}
+// NOT WORKING ---->
+
+// int findPosition(int arr, int n, int k)
+// {
+//     int pivot = findPivot(arr, n);
+//     if (k > arr[pivot])
+//     {
+//     }
+// }
 
 int main()
 {
-    int arr[9];
- int pivot = findPivot(arr, 9);
+    int arr[9] = {7, 8, 9, 1, 2, 3, 4, 5, 6};
+
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    int k;
+    cout << "Enter no searching for: ";
+    cin >> k;
+
+    int pivot = findPivot(arr, 9);
+
+    if (k >= arr[pivot] && k <= arr[n - 1])
+    {
+        cout << "INdex is: " << binarySearch(arr, pivot, n - 1, k)
+             << endl;
+    }
+
+    else
+    {
+        cout << "INdex is: " << binarySearch(arr, 0, pivot - 1, k)
+             << endl;
+    }
+
     return 0;
 }
