@@ -1,3 +1,5 @@
+// Find square root of a number entered by the user using BINARY searh
+
 #include <bits/stdc++.h>
 using namespace std;
 
